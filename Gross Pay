@@ -1,0 +1,124 @@
+ 1 // Zahin Roja
+  2 // September 22, 2017
+  3 // Homework #3 - Determining gross pay and net gross pay
+  4
+  5 #include <iostream>
+  6 using namespace std;
+  7 int main()
+  8 {
+  9
+ 10    // Variables
+ 11    double hours;
+ 12    int dependent;
+ 13    double pay;
+ 14    double grosspay;
+ 15    double FederalIncomeTax;
+ 16    double StateIncomeTax;
+ 17    double SocialSecurity;
+ 18    double Uniondues;
+ 19    double nettakehome;
+ 20    double insurance;
+ 21    char rerun;
+ 22
+ 23    // Says to display decimal numbers with two decimal places
+ 24    cout.setf (ios::fixed);
+ 25    cout.setf (ios::showpoint);
+ 26    cout.precision(2); 43          grosspay = (40*16.78)+((hours-40) * 25.17) ;
+ 44       }
+ 45
+ 46       // Processing and Output
+ 47       cout <<"    Gross pay is: " << grosspay << endl;
+ 48       cout <<"                         " << endl;
+ 49
+ 50       SocialSecurity = grosspay * .06;
+ 51       cout << "       SS Tax is: " << SocialSecurity * -1 << endl;
+ 52
+ 53       FederalIncomeTax = grosspay * .14;
+ 54       cout << "      Fed Tax is: " << FederalIncomeTax * -1 << endl;
+ 55
+ 56       StateIncomeTax = grosspay * .05;
+ 57       cout << "    State Tax is: " << StateIncomeTax * -1 << endl;
+ 58
+ 59       Uniondues = 10.00;
+ 60       cout << "   Union Dues is: " << Uniondues * -1 << endl;
+ 61
+ 62       if (dependent  >= 3 )
+ 63       {
+ 64          insurance = 35;
+ 65          cout << "   Insurance is : " << insurance * -1 << endl;
+ 66       }
+ 67       else
+ 68       {
+ 69          insurance = 0.00;
+ 70          cout << "    Insurance is:  " << insurance * -1 << endl;
+ 71       }
+ 72
+ 73       cout << "                         " << endl;
+ 74       nettakehome = grosspay - (SocialSecurity + FederalIncomeTax + StateInc    omeTax + Uniondues + insurance);
+ 75
+ 76       cout << "Take home pay is: " << nettakehome << endl;
+ 77       cout << "Would you like to run another calculation? 1=yes 0=No : " <<     endl;
+ 78       cin  >> rerun;
+ 79
+ 80    } while (rerun == '1');
+ 81       cout << "Have a nice day!" << endl;
+ 82       return 0;
+ 83 }
+
+ 27
+ 28    do
+ 29    {
+ 30       // Input
+ 31       cout << "Enter number of hours worked : " ;
+ 32       cin >> hours;
+ 33       cout << "  Enter number of dependents : " ;
+ 34       cin >> dependent;
+ 35       cout << "                               " << endl;
+ 36
+ 37       if (hours <=40)
+ 38       {
+ 39          grosspay = hours * 16.78;
+ 40       }
+ 41       else
+ 42       {
+ 43          grosspay = (40*16.78)+((hours-40) * 25.17) ;
+ 44       }
+ 45
+ 46       // Processing and Output
+ 47       cout <<"    Gross pay is: " << grosspay << endl;
+ 48       cout <<"                         " << endl;
+ 49
+ 50       SocialSecurity = grosspay * .06;
+ 51       cout << "       SS Tax is: " << SocialSecurity * -1 << endl;
+ 52
+ 53       FederalIncomeTax = grosspay * .14;
+ 54       cout << "      Fed Tax is: " << FederalIncomeTax * -1 << endl;
+ 55
+ 56       StateIncomeTax = grosspay * .05;
+ 57       cout << "    State Tax is: " << StateIncomeTax * -1 << endl;
+ 58
+ 59       Uniondues = 10.00;
+ 60       cout << "   Union Dues is: " << Uniondues * -1 << endl;
+ 61
+ 62       if (dependent  >= 3 )
+ 63       {
+ 64          insurance = 35;
+ 65          cout << "   Insurance is : " << insurance * -1 << endl;
+ 66       }
+ 67       else
+ 68       {
+ 69          insurance = 0.00;
+ 70          cout << "    Insurance is:  " << insurance * -1 << endl;
+ 71       }
+ 72
+ 73       cout << "                         " << endl;
+ 74       nettakehome = grosspay - (SocialSecurity + FederalIncomeTax + StateInc    omeTax + Uniondues + insurance);
+ 75
+ 76       cout << "Take home pay is: " << nettakehome << endl;
+ 77       cout << "Would you like to run another calculation? 1=yes 0=No : " <<     endl;
+ 78       cin  >> rerun;
+ 79
+ 80    } while (rerun == '1');
+ 81       cout << "Have a nice day!" << endl;
+ 82       return 0;
+ 83 }
