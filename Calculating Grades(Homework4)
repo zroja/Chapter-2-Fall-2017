@@ -1,0 +1,48 @@
+ 1 // Zahin Roja
+  2 // October 2, 2017
+  3 // Homework #4: Grades
+  4
+  5 #include <iostream>
+  6 using namespace std;
+  7
+  8 int main()
+  9 {
+ 10    // Variables
+ 11    int exercise, counter, score, points;
+ 12    double finaltotal, totalscore, totalpoints;
+ 13
+ 14    // init
+ 15    totalscore  = 0;
+ 16    totalpoints = 0;
+ 17    exercise    = 1;
+ 18
+ 19    // Displays Decimal Numbers with two decimal places
+ 20    cout.setf(ios::fixed);
+ 21    cout.setf(ios::showpoint);
+ 22    cout.precision(2);
+ 23
+ 24
+ 25    // Input
+ 26    cout << "How many exercises to input? " << endl;
+ 27    cin >> counter;
+ 28
+ 29    // Processing
+ 30    while (counter >0)
+ 31    {
+ 32    cout << "Score recieved for exercise " << counter << " : " ;
+ 33    cin >> score;
+ 34    totalscore= totalscore + score;
+ 35    cout << "Total points possible for exercise " << counter << " : ";
+ 36    cin >> points;
+ 37    totalpoints = totalpoints + points;
+ 38
+ 39    counter --;
+ 40    exercise ++;
+ 41    }
+ 42
+ 43    // Output
+ 44    finaltotal = (totalscore / totalpoints)*100;
+ 45    cout << "Your total is " << totalscore << " out of " << totalpoints << " , or " << finaltotal << " % ";
+ 46
+ 47    return 0;
+ 48 }
